@@ -1,0 +1,431 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway";
+  overflow-x: hidden;
+}
+
+.max-width {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  background-image: url(../images/index_header.png);
+  height: 100vh;
+  max-height: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header-logo {
+  margin-top: 35vh;
+  cursor: pointer;
+}
+
+.header-logo p {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.header-logo img {
+  width: 80vw;
+}
+
+.display-center {
+  display: flex;
+  justify-content: center;
+}
+
+.info-block {
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+}
+
+.info-block h1 {
+  color: #cc2227;
+  margin-bottom: 1rem;
+}
+
+.info-block p {
+  margin-bottom: 2rem;
+}
+
+.login-block {
+  width: 25vw;
+}
+
+.login-block p {
+  font-size: 1.5rem;
+}
+
+.login-block h1 {
+  font-size: 2.5rem;
+  margin: 4rem 0 2rem 0;
+  text-align: center;
+}
+
+.login-block button {
+  background-color: #cc2227;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login {
+  background-image: url(../images/login-background.jpg);
+}
+
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-guest {
+  background-color: #545454;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  width: 25vw;
+  margin: 5rem 0;
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background-color: black;
+}
+
+footer img {
+  margin: 2.5rem 5vw;
+}
+
+.copywriting,
+.design-info {
+  color: white;
+  text-align: center;
+}
+
+.design-info {
+  margin: 0.7rem 0;
+  font-size: 0.7rem;
+}
+
+.agreement {
+  font-size: 0.75rem;
+  width: 25vw;
+}
+
+.error {
+  border: 3px solid #cc2227 !important;
+}
+
+.error-message {
+  color: #cc2227;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  display: none;
+}
+
+.exit-login-student,
+.exit-reg-student {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  position: fixed;
+  background: rgba(69, 69, 69, 0.4);
+  display: none;
+}
+
+.student-login {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  transition: right 0.5s ease-out;
+}
+
+.student-login-visible {
+  right: 0 !important;
+  transition: right 0.5s ease-out;
+}
+
+.student-login-invisible {
+  right: -100% !important;
+}
+
+.student-login,
+.student-reg {
+  top: 0;
+  width: 35vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: -100%;
+  transition: right 0.5s ease-out;
+}
+
+.student-login input,
+.student-reg input,
+select {
+  width: 25vw;
+  background: #d9d9d9;
+  border: none;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.input-box {
+  margin-bottom: 1rem;
+}
+
+.student-login h1,
+.student-reg h1 {
+  font-size: 2.5rem;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.student-login button,
+.student-reg button {
+  background-color: #cc2227;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 25vw;
+  margin: 1rem 0;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.student-reg {
+  overflow-y: auto;
+}
+
+.login-reg {
+  text-align: center;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  color: #545454;
+}
+
+.login-reg:hover {
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem 1rem 0 0;
+}
+
+.reg-select {
+  position: relative;
+}
+
+.reg-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  z-index: 1;
+}
+
+.select-arrow {
+  position: absolute;
+  z-index: 2;
+  margin: 1.5rem 0 0 -2.5rem;
+}
+
+.close-img {
+  position: absolute;
+  right: 0;
+  margin: 2rem 4rem 0 0;
+}
+
+.close-img:hover {
+  cursor: pointer;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
+}
+
+.password-box img:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .close-img {
+    margin-right: 1.75rem;
+  }
+
+  .student-login,
+  .student-reg {
+    width: 50vw;
+  }
+
+  .student-login input,
+  .student-reg input,
+  .student-login button,
+  .student-reg button,
+  select,
+  .agreement {
+    width: 40vw;
+  }
+
+  .info-block {
+    font-size: 1rem;
+  }
+
+  .login-block p {
+    font-size: 1.25rem;
+  }
+
+  .login-block h1 {
+    font-size: 1.75rem;
+    margin: 4rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .button-guest,
+  .login-block button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .student-login,
+  .student-reg {
+    width: 100vw;
+  }
+
+  .student-login input,
+  .student-reg input,
+  .student-login button,
+  .student-reg button,
+  select,
+  .agreement {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .close-img {
+    margin-right: 0.75rem;
+  }
+
+  .header-logo p {
+    font-size: 1.5rem;
+  }
+
+  .login-block p {
+    font-size: 1rem;
+  }
+
+  .login-block h1 {
+    font-size: 1.25rem;
+    margin: 4rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .login-block {
+    width: 33vw;
+  }
+
+  .button-guest,
+  .login-block button {
+    font-size: 0.75rem;
+    width: 33vw;
+  }
+
+  .footer-img {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-img img {
+    margin: 2rem 0 0 0;
+  }
+
+  .copywriting {
+    margin-top: 2rem;
+  }
+
+  .info-block {
+    padding: 2rem;
+  }
+
+  .button-guest {
+    margin: 2rem 0;
+  }
+
+  .student-login button,
+  .student-reg button,
+  .student-login input,
+  .student-reg input,
+  select {
+    font-size: 1rem;
+  }
+
+  .login-reg {
+    font-size: 0.75rem;
+  }
+
+  .password-box img {
+    height: 2rem;
+    width: 2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .close-img {
+    margin: 1.5rem 0.5rem 0 0;
+  }
+
+  .login-block p {
+    font-size: 0.75rem;
+  }
+
+  .login-block h1 {
+    font-size: 1rem;
+    margin: 4rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .button-guest,
+  .login-block button {
+    font-size: 0.6rem;
+    width: 33vw;
+  }
+}

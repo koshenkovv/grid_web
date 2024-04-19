@@ -1,0 +1,78 @@
+
+header {
+  background-color: #cc2227;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between !important;
+  padding: 2rem 2rem;
+}
+
+.header img {
+  height: 2rem;
+}
+
+.header-bell {
+  margin: 0 2rem;
+}
+
+.search-bar {
+  max-width: 500px;
+  width: 35vw;
+  font-size: 1em;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.search-button {
+  position: absolute;
+  border: none;
+  background: none;
+  z-index: 2;
+  margin: 0.3rem 0 0 -2.5rem;
+}
+
+.search-button img {
+  height: 1.5rem;
+}
+
+
+
+<header>
+<div class="header">
+    <div>
+        <a href="./index.html">
+            <img src="/media/images/header_text_logo.svg" alt="logo">
+        </a>
+    </div>
+    <div>
+        <search>
+            <form>
+                <input name="search" id="search" placeholder="" type="search" class="search-bar">
+                <button type="submit" class="search-button"><img src="/media/images/search.svg"
+                        alt="search"></button>
+            </form>
+        </search>
+    </div>
+    <div>
+        <a href="">
+            <img src="/media/images/rating.svg" alt="rating">
+        </a>
+        <a href="" class="header-bell">
+            <img src="/media/images/bell.svg" alt="notifications">
+        </a>
+        <a href="">
+            <img src="/media/images/profile.svg" alt="profile">
+        </a>
+    </div>
+</div>
+</header>

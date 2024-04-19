@@ -1,0 +1,116 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway";
+}
+
+.footer {
+  max-width: 768px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 0px;
+  margin: 0 auto;
+}
+
+.footer img {
+  height: 1.5rem;
+}
+
+footer {
+  padding: 1.25rem 0;
+  width: 100vw;
+  background-color: #cc2222;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+}
+
+.display-center {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-university-image {
+  margin: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  aspect-ratio: 1/1;
+  background-image: url(../images/university.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.mobile-university-image h1 {
+  position: absolute;
+  bottom: 0;
+  margin: 1rem;
+  color: white;
+}
+
+.mobile-university-info {
+  margin: 0 2rem;
+  background-color: #d9d9d9;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.mobile-university-info p {
+  margin-bottom: 0.5rem;
+}
+
+.mobile-darkgrey-white-button {
+  background-color: #a7a4a4;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.color-red {
+  color: #cc2222;
+}
+
+.mobile-grey-black-button {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  padding: 0.75rem;
+  background-color: #d9d9d9;
+}
+
+.mobile-university-button-block {
+  box-sizing: border-box;
+  margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-last-element {
+  margin-bottom: 5rem;
+}
+
+.mobile-display {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-display {
+    display: none;
+  }
+  .mobile-display {
+    display: block;
+  }
+}

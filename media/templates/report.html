@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="header">Главная</title>
+    <link rel="shortcut icon" href="/media/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/media/styles/style_main.css">
+</head>
+
+<body>
+    <section class="desktop-view">
+        <header>
+            <div class="header">
+                <div class="header-logo"><a href="https://studentsays.ru/reports/"><img class="big-logo"
+                            src="/media/images/header_white_logo.svg" alt="logo"><img class="small-logo"
+                            src="/media/images/white-fire.svg" alt="logo"></a>
+                </div>
+                <div>
+                    <search>
+                        <form>
+                            <input name="search" id="search" placeholder="" type="search" class="search-bar">
+                            <button type="submit" class="search-button"><img src="/media/images/search.svg"
+                                    alt="search"></button>
+                        </form>
+                    </search>
+                </div>
+                <div class="header-navigation">
+                    <a href="">
+                        <img src="/media/images/bell.svg" alt="notifications">
+                    </a>
+                    <a href="" class="header-rating">
+                        <img src="/media/images/rating.svg" alt="rating">
+
+                    </a>
+                    <a href="">
+                        <img src="/media/images/profile.png" alt="profile">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="background-grey">
+            <div class="display-center">
+                <div class="main-max-width">
+                    <div>
+                        <div class="space-between sort-block">
+                            <a href="https://studentsays.ru/reports/">
+                                <div class="display-flex report-header-navigation">
+                                    <img src="/media/images/arrow-left.svg" alt="back">
+                                    <h1>
+                                        Обращения
+                                    </h1>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="add-report-mobile">
+                            <img src="/media/images/add_button.svg" alt="add-report">
+                        </div>
+                    </div>
+                    <div class="display-flex">
+                        <div class="report-section">
+                            <section class="report-block">
+                                <div class="space-between">
+                                    <div class="report-header">
+                                        <h1 id="header">{{ detail.header }}</h1>
+                                        <p id="username">{% if detail.anonym %}
+                                            Анонимный студент
+                                            {% else %}
+                                            {% if detail.idUser %}
+                                            {{ detail.idUser.first_name }} {{ detail.idUser.last_name }}
+                                            {% else %}
+                                            Неизвестный пользователь
+                                            {% endif %}
+                                            {% endif %}</p>
+                                    </div>
+                                    <div>
+                                        <h1 class="report-status" id="status">{{ detail.status }}</h1>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="report-text" id="text">{{ detail.text }}</p>
+                                </div>
+
+                                {% if detail.photo5 %}
+                                <div id="report-images-block-5" class="report-images-block-5">
+                                    <div onclick="showImage(event)" class="report-images-block-5-1"
+                                        style="background-image: url('/media/{{ detail.photo1 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-5-2"
+                                        style="background-image: url('/media/{{ detail.photo2 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-5-3"
+                                        style="background-image: url('/media/{{ detail.photo3 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-5-4"
+                                        style="background-image: url('/media/{{ detail.photo4 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-5-5"
+                                        style="background-image: url('/media/{{ detail.photo5 }}');"></div>
+                                </div>
+
+                                {% elif detail.photo4 %}
+                                <div id="report-images-block-4" class="report-images-block-4">
+                                    <div onclick="showImage(event)" class="report-images-block-4-1"
+                                        style="background-image: url('/media/{{ detail.photo1 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-4-2"
+                                        style="background-image: url('/media/{{ detail.photo2 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-4-3"
+                                        style="background-image: url('/media/{{ detail.photo3 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-4-4"
+                                        style="background-image: url('/media/{{ detail.photo4 }}');"></div>
+                                </div>
+
+                                {% elif detail.photo3 %}
+                                <div id="report-images-block-3" class="report-images-block-3">
+                                    <div onclick="showImage(event)" class="report-images-block-3-1"
+                                        style="background-image: url('/media/{{ detail.photo1 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-3-2"
+                                        style="background-image: url('/media/{{ detail.photo2 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-3-3"
+                                        style="background-image: url('/media/{{ detail.photo3 }}');"></div>
+                                </div>
+
+                                {% elif detail.photo2 %}
+                                <div id="report-images-block-2" class="report-images-block-2">
+                                    <div onclick="showImage(event)" class="report-images-block-2-1"
+                                        style="background-image: url('/media/{{ detail.photo1 }}');"></div>
+                                    <div onclick="showImage(event)" class="report-images-block-2-2"
+                                        style="background-image: url('/media/{{ detail.photo2 }}');"></div>
+                                </div>
+
+                                {% elif detail.photo1 %}
+                                <div id="report-images-block-1" class="report-images-block-1">
+                                    <div onclick="showImage(event)" class="report-images-block-1-1"
+                                        style="background-image: url('/media/{{ detail.photo1 }}');"></div>
+                                </div>
+                                {% endif %}
+
+                                <div class="space-between">
+                                    <div class="report-buttons display-flex">
+                                        <p id="rating" class="report-rating">{{ detail.rating }}</p>
+                                        <img src="/media/images/dark-grey-fire.svg" alt="rate-up">
+                                        <img onclick="switchComments()" src="/media/images/comments.svg" alt="comments"
+                                            class="comments-img">
+                                        <img src="/media/images/link.svg" alt="share">
+                                    </div>
+                                    <div>
+                                        <p id="date_created">{{ detail.date_created }}</p>
+                                    </div>
+                                </div>
+                                <div class="report-comments" id="comments-section">
+                                    <div class="report-comments-header">
+                                        <h1>
+                                            Комментарии
+                                        </h1>
+                                    </div>
+                                    {% for comment in comments %}
+                                    {% if comment.idReport == detail.idReport %}
+                                    <div
+                                        class="report-comment-el{% if comment.isUniversityComment %} uni-of-comment{% endif %}">
+                                        <h1>{{ comment.user_name }}</h1>
+                                        <p>{{ comment.text }}</p>
+                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
+
+                                    <div class="display-flex report-comment-input">
+                                        <input type="text" placeholder="Написать комментарий...">
+                                        <img src="/media/images/arrow-send.svg" alt="send">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div>
+                            <section class="university-block">
+                                <div class="university-img">
+                                    <h1>
+                                        Мой ВУЗ
+                                    </h1>
+                                </div>
+                                <div>
+                                    <div>
+                                        <button class="add-report">Добавить обращение</button>
+                                    </div>
+                                    <div>
+                                        <button class="my-reports">Мои обращения </button>
+                                    </div>
+                                </div>
+                                <div class="best-reports">
+                                    <h1>Топ прошлой недели</h1>
+                                    <div class="space-between one-of-best">
+                                        <h2>Заявка заявка заявка</h2>
+                                        <div class="display-flex">
+                                            <p class="best-amount">123</p>
+                                            <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                        </div>
+                                    </div>
+                                    <div class="space-between one-of-best">
+                                        <h2>Заявка заявка заявка</h2>
+                                        <div class="display-flex">
+                                            <p class="best-amount">123</p>
+                                            <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                        </div>
+                                    </div>
+                                    <div class="space-between one-of-best">
+                                        <h2>Заявка заявка заявка</h2>
+                                        <div class="display-flex">
+                                            <p class="best-amount">123</p>
+                                            <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                        </div>
+                                    </div>
+                                    <div class="space-between one-of-best">
+                                        <h2>Заявка заявка заявка</h2>
+                                        <div class="display-flex">
+                                            <p class="best-amount">123</p>
+                                            <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                        </div>
+                                    </div>
+                                    <div class="space-between one-of-best">
+                                        <h2>Заявка заявка заявка</h2>
+                                        <div class="display-flex">
+                                            <p class="best-amount">123</p>
+                                            <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </section>
+    <div class="desktop-image-show" onclick="switchImageShow()">
+        <img src="/media/images/index_header.png" alt="img" id="imageShowcase">
+    </div>
+
+</body>
+<script src="/media/scripts/report_script.js"></script>
+
+</html>

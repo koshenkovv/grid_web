@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentSays</title>
+    <link rel="stylesheet" href="/media/styles/style_index.css">
+    <link rel="shortcut icon" href="/media/images/favicon-32x32.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="max-width">
+        <div class="header-logo">
+            <div class="display-center">
+                <img src="/media/images/header_logo.svg" alt="name">
+            </div>
+            <div class="display-center">
+                <p>
+                    Платформа для обращений
+                </p>
+            </div>
+        </div>
+    </header>
+    <section class="info-block">
+        <div>
+            <h1>
+                О проекте
+            </h1>
+            <p>
+                Ученикам будет доступна возможность создавать
+                обращения, касающиеся различных аспектов образовательного процесса и голосовать за публикации других
+                учеников из их учебного заведения. При достижении заявкой определенного количества голосов, она
+                автоматически отправляется в образовательную организацию. После ее получения, в установленные
+                образовательной организацией сроки, необходимо предоставить ответ по заявке, который будет отображаться
+                у
+                учеников. Каждое успешное обращение улучшает
+                образовательный процесс и вносит вклад в формирование рейтинга эффективности организаций.
+            </p>
+        </div>
+        <div>
+            <h1>
+                Описание проблемной ситуации
+            </h1>
+            <p>
+                Даже в небольших образовательных учреждениях невозможно своевременно решать все возникающие проблемы.
+                Какие-то сложно решить из-за недостатка бюджета, другие попросту сложно выявить без непосредственной
+                обратной связи от учеников. Существующая в большинстве учебных организациях система не отвечает
+                требованиям времени, являясь слишком низкоэффективной. Из-за этого, а также из-за отсутствия какой-либо
+                явной системы поощрения, у студентов отсутствует мотивация ее использования.
+            </p>
+        </div>
+        <div>
+            <h1>
+                Прогнозируемые эффекты
+            </h1>
+            <p>
+                Время рассмотрения обращений студентов составляет до 30 дней. Благодаря унификации и упрощению процесса
+                работы, стандартное время ответа возможно сократить до 7-14 дней и до 1-3 дней для экстренных случаев.
+                За счет удобной системы, в том числе и для студентов, количество вовлеченных людей можно повысить свыше
+                50%. Это, в свою очередь, улучшит качество получаемых данных и благоприятно повлияет на процесс принятия
+                решений образовательной организацией.
+            </p>
+        </div>
+    </section>
+    <section class="login">
+        <div class="space-evenly">
+            <div class="login-block">
+                <h1>
+                    Студентам
+                </h1>
+                <p>
+                    Если Вы являетесь студентом, одного из участвующих в программе ВУЗов - войдите или пройдите
+                    регистраицию по кнопке ниже.
+                </p>
+
+                <button onclick="showStudentLoginBlock()">
+                    Вход для студентов
+                </button>
+
+            </div>
+            <div class="login-block">
+                <h1>
+                    ВУЗам
+                </h1>
+                <p>
+                    Если Вы являетесь сотрудником, одного из участвующих в программе ВУЗов - войдите или пройдите
+                    регистраицию по кнопке ниже.
+                </p>
+                <a href="">
+                    <button>
+                        Вход для ВУЗов
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="display-center">
+            <a href="./main.html">
+                <button class="button-guest">
+                    Войти как гость
+                </button>
+            </a>
+
+        </div>
+    </section>
+    <footer class="display-center">
+        <div>
+            <div class="footer-img">
+                <a href="">
+                    <img src="/media/images/download_apple.png" alt="download_apple">
+                </a>
+                <a href="">
+                    <img src="/media/images/download_android.png" alt="download_android">
+                </a>
+            </div>
+            <div>
+                <p class="copywriting">
+                    © 2024 Studentsays. Все права защищены.
+                </p>
+                <p class="design-info">
+                    designed by Liza Nepomnyashaya
+                </p>
+            </div>
+        </div>
+    </footer>
+    <section class="student-login-block">
+        <div class="exit-login-student" onclick="hideLoginStudent('.student-login', '.exit-login-student')">
+
+        </div>
+        <div class="student-login">
+            <div>
+                <div class="close-img">
+                    <img src="/media/images/close.svg" alt="close"
+                        onclick="hideLoginStudent('.student-login', '.exit-login-student')">
+                </div>
+                <div>
+                    <h1>Вход</h1>
+                </div>
+                <form id="loginForm" action="https://studentsays.ru/api/login/" method="post">
+                    <div class="input-box">
+                        <input class="input-el" name="username" type="text" placeholder="Логин">
+                    </div>
+                    <div class="input-box password-box">
+                        <input class="input-el" name="password" type="password" placeholder="Пароль">
+                        <img src="/media/images/open-eye.svg" alt="show" id="password_icon">
+                    </div>
+                    <div class="error-message">Проверьте правильность заполнения полей</div>
+                    <div>
+                        <button type="submit">Войти</button>
+                    </div>
+                </form>
+                <div>
+                    <p class="login-reg"
+                        onclick="showStudentRegBlock(), hideLoginStudent('.student-login', '.exit-login-student')">
+                        Нет аккаунта? Зарегестрироваться.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="student-reg-block">
+        <div class="exit-reg-student" onclick="hideLoginStudent('.student-reg', '.exit-reg-student');">
+
+        </div>
+        <div class="student-reg">
+            <div>
+                <div class="close-img">
+                    <img src="/media/images/close.svg" alt="close"
+                        onclick="hideLoginStudent('.student-reg', '.exit-reg-student');">
+                </div>
+                <div>
+                    <h1>Регистрация</h1>
+                </div>
+                <form id="registrationForm" action="https://studentsays.ru/api/registration/" method="post">
+                    <div class="input-box reg-select">
+                        <select id="universities" name="university">
+                            <option selected="true" disabled="disabled">Выберите ВУЗ</option>
+
+                        </select>
+                        <img src="/media/images/select-arrow.svg" alt="arrow" class="select-arrow">
+                    </div>
+                    <div class="input-box">
+                        <input class="input-el" type="text" name="username" placeholder="Логин*">
+                    </div>
+                    <div class="input-box">
+                        <input class="input-el" type="text" name="email" placeholder="Email*">
+                    </div>
+                    <div class="input-box">
+                        <input class="input-el tel" type="tel" name="phone" placeholder="+7 (999)-999-99-99*">
+                    </div>
+                    <div class="input-box">
+                        <input class="input-el" type="text" name="first_name" placeholder="Имя*">
+                    </div>
+                    <div class="input-box">
+                        <input class="input-el" type="text" name="last_name" placeholder="Фамилия*">
+                    </div>
+                    <div class="input-box">
+                        <input class="input-el" type="text" name="student_id" placeholder="Номер студенческого билета*">
+                    </div>
+                    <div class="input-box">
+                        <input class="input-el" type="password" name="password" placeholder="Пароль*">
+                    </div>
+                    <div class="input-box">
+                        <input class="input-el" type="password" name="confirm_password" placeholder="Повторите пароль*">
+                    </div>
+                    <div>
+                        <p class="agreement">
+                            Продолжая регистрацию, я соглашаюсь с <a href="">Правилами пользования сайтом и
+                                обработки
+                                персональных
+                                данных</a>
+                        </p>
+                    </div>
+                    <div class="error-message">Проверьте правильность заполнения полей</div>
+                    <div>
+                        <button type="submit">Зарегистрироваться</button>
+                    </div>
+                    <div>
+                        <p class="login-reg"
+                            onclick="showStudentLoginBlock(), hideLoginStudent('.student-reg', '.exit-reg-student');">
+                            Есть аккаунт? Войти.
+                        </p>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </section>
+</body>
+<script src="/media/scripts/index_script.js"></script>
+
+</html>

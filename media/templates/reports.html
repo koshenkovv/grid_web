@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="shortcut icon" href="/media/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/media/styles/style_main.css">
+</head>
+
+<body>
+    <section class="desktop-view">
+        <header>
+            <div class="header">
+                <div class="header-logo"><a href="./main"><img class="big-logo"
+                            src="/media/images/header_white_logo.svg" alt="logo"><img class="small-logo"
+                            src="/media/images/white-fire.svg" alt="logo"></a>
+                </div>
+                <div>
+                    <search>
+                        <form>
+                            <input name="search" id="search" placeholder="" type="search" class="search-bar">
+                            <button type="submit" class="search-button"><img src="/media/images/search.svg"
+                                    alt="search"></button>
+                        </form>
+                    </search>
+                </div>
+                <div class="header-navigation">
+                    <a href="">
+                        <img src="/media/images/bell.svg" alt="notifications">
+                    </a>
+                    <a href="" class="header-rating">
+                        <img src="/media/images/rating.svg" alt="rating">
+
+                    </a>
+                    <a href="">
+                        <img src="/media/images/profile.png" alt="profile">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="background-grey">
+            <div class="display-center">
+                <div class="main-max-width">
+                    <div>
+                        <div class="space-between sort-block">
+                            <div>
+                                <h1>
+                                    Обращения
+                                </h1>
+                                <div class="display-flex">
+                                    <form action="">
+                                        <select name="sort" id="" class="sort">
+                                            <option value="1">Сначала новые</option>
+                                            <option value="2">Сначала старые</option>
+                                            <option value="3">Сначала популярные</option>
+                                            <option value="4">Сначала непопулярные</option>
+                                        </select>
+                                    </form>
+                                    <img src="/media/images/sort_by_best.svg" alt="sort_by_best" class="sort-img">
+                                </div>
+                            </div>
+                            <div class="add-report-mobile">
+                                <img src="/media/images/add_button.svg" alt="add-report">
+                            </div>
+                        </div>
+
+                        <div class="display-flex">
+                            <div id="report-section">
+                                {% for report in reports %}
+                                <section class="report-block" data-report-id="{{ report.idReport }}"
+                                    onclick="openReport(this)">
+                                    <div class="space-between">
+                                        <div class="report-header">
+                                            <h1>{{ report.header }}</h1>
+                                            <p>{% if report.anonym %}
+                                                Анонимный студент
+                                                {% else %}
+                                                {% if report.idUser %}
+                                                {{ report.idUser.first_name }} {{ report.idUser.last_name }}
+                                                {% else %}
+                                                Неизвестный пользователь
+                                                {% endif %}
+                                                {% endif %}</p>
+                                        </div>
+                                        <div>
+                                            <h1 class="report-status">{{ report.idStatus }}</h1>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="report-text">{{ report.text }}</p>
+                                    </div>
+                                    <div class="space-between">
+                                        <div class="report-buttons display-flex">
+                                            <p id="rating" class="report-rating">{{ report.rating }}</p>
+                                            <img src="/media/images/dark-grey-fire.svg" alt="rate-up">
+                                            <img src="/media/images/comments.svg" class="comments-img" alt="comments">
+                                            <img src="/media/images/link.svg" alt="share">
+                                        </div>
+                                        <div>
+                                            <p id="date_created">{{ report.date_created }}</p>
+                                        </div>
+                                    </div>
+                                </section>
+                                {% endfor %}
+                            </div>
+                            <div>
+                                <section class="university-block">
+                                    <div class="university-img" style="background-image: url('/media/{{ universities.0.photo }}');">
+                                        <h1>
+                                           {{universities.0.name}}
+                                        </h1>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <button onclick="SwitchReport()" class="add-report">Добавить
+                                                обращение</button>
+                                        </div>
+                                        <div>
+                                            <button class="my-reports">Мои обращения </button>
+                                        </div>
+                                    </div>
+                                    <div class="best-reports">
+                                        <h1>Топ прошлой недели</h1>
+                                        <div class="space-between one-of-best">
+                                            <h2>Заявка заявка заявка</h2>
+                                            <div class="display-flex">
+                                                <p class="best-amount">123</p>
+                                                <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                            </div>
+                                        </div>
+                                        <div class="space-between one-of-best">
+                                            <h2>Заявка заявка заявка</h2>
+                                            <div class="display-flex">
+                                                <p class="best-amount">123</p>
+                                                <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                            </div>
+                                        </div>
+                                        <div class="space-between one-of-best">
+                                            <h2>Заявка заявка заявка</h2>
+                                            <div class="display-flex">
+                                                <p class="best-amount">123</p>
+                                                <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                            </div>
+                                        </div>
+                                        <div class="space-between one-of-best">
+                                            <h2>Заявка заявка заявка</h2>
+                                            <div class="display-flex">
+                                                <p class="best-amount">123</p>
+                                                <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                            </div>
+                                        </div>
+                                        <div class="space-between one-of-best">
+                                            <h2>Заявка заявка заявка</h2>
+                                            <div class="display-flex">
+                                                <p class="best-amount">123</p>
+                                                <img src="/media/images/grey-fire.svg" alt="rate-up">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="mobile-view">
+        <div class="mobile-header">
+            <div>
+                <img src="/media/images/home.png" alt="home">
+            </div>
+            <div>
+                <img src="/media/images/bell.svg" alt="bell">
+            </div>
+            <div>
+                <img src="/media/images/rating.svg" alt="rating">
+            </div>
+            <div>
+                <img src="/media/images/profile.png" alt="profile">
+            </div>
+        </div>
+        <section class="mobile-body">
+            <div>
+                <div>
+                    <img src="/media/images/add_button.svg" alt="add">
+                </div>
+                <div class="mobile-university-block">
+                    <h1>
+                        Мой вуз
+                    </h1>
+                </div>
+                <div>
+                    <div class="mobile-reports-name">
+                        <h1>Обращения</h1>
+                    </div>
+
+                    <div class="display-flex">
+                        <form action="">
+                            <select name="mobile-sort" id="" class="mobile-sort">
+                                <option value="1">Сначала новые</option>
+                                <option value="2">Сначала старые</option>
+                                <option value="3">Сначала популярные</option>
+                                <option value="4">Сначала непопулярные</option>
+                            </select>
+                        </form>
+                        <img src="/media/images/sort_by_best.svg" alt="sort_by_best" class="mobile-sort-img">
+                    </div>
+                </div>
+                <div id="mobile-report-block">
+                    {% for report in reports %}
+                    <div class="mobile-report" data-report-id="{{ report.idReport }}" onclick="openReport(this)">
+                        <div class="space-between">
+                            <p class="mobile-report-header">
+                                {{ report.header }}
+                            </p>
+                            <p class="mobile-report-date">
+                                {{ report.date_created }}
+                            </p>
+                        </div>
+                        <div class="space-between">
+                            <p class="mobile-report-author">
+                                {% if report.anonym %}
+                                Аноним
+                                {% else %}
+                                {{ report.idUser.first_name }} {{ report.idUser.last_name }}
+                                {% endif %}
+                            </p>
+                            <div class="display-flex">
+                                <img class="mobile-report-rating-image" src="/media/images/dark-grey-fire.svg"
+                                    alt="rate-up">
+                                <p class="mobile-report-rating">
+                                    {{ report.rating }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="create-report-block" id="create-report-block">
+        <div class="close-report" onclick="SwitchReport()">
+
+        </div>
+        <div class="create-report-form" id="create-report-form">
+            <div class="report-form-header" onclick="SwitchReport()">
+                <img src="/media/images/close.svg" alt="back">
+                <h1>
+                    Добавить обращение
+                </h1>
+            </div>
+            <form action="">
+                <input type="text" id="header" name="header" placeholder="Заголовок">
+                <div class="theme-select">
+                    <select name="theme" id="theme">
+                        <option selected="true" disabled="disabled">Выберите тему</option>
+                        {% for theme in themes %}
+                            <option value="{{ theme.id }}">{{ theme.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <img src="/media/images/select-arrow.svg" alt="arrow" class="select-arrow">
+                </div>
+                <div class="textarea-box">
+                    <textarea oninput="autoResize(this)" name="text" id="text" cols="30" rows="10"
+                        placeholder="Введите текст обращения"></textarea>
+                    <img src="/media/images/clip.svg" alt="clip" class="add-images" id="upload-button">
+                </div>
+                <div class="uploaded-images" id="images-container">
+                    <!-- <div class="uploaded-image">
+                        <img src="/media/images/close.svg" alt="close" class="delete-image">
+                    </div>
+                    <div class="uploaded-image"></div>
+                    <div class="uploaded-image"></div>
+                    <div class="uploaded-image"></div>
+                    <div class="uploaded-image"></div> -->
+                </div>
+                <div class="send-button-block">
+                    <button onclick="sendReport()" class="send-report-button">Отправить</button>
+
+                    <div class="display-flex">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <p class="is-anonim">
+                            Опубликовать анонимно
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+<script src="/media/scripts/reports_script.js"></script>
+<script src="/media/scripts/report_create.js"></script>
+</html>

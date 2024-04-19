@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./media/styles/university_style.css" />
+    <link rel="stylesheet" href="./media/styles/mobile_style.css" />
+    <title>Университет</title>
+  </head>
+  <body>
+    <section class="desktop-display">
+      <header>
+        <div class="header">
+          <div class="header-logo">
+            <a href="./main"
+              ><img
+                class="big-logo"
+                src="./media/images/header_white_logo.svg"
+                alt="logo" /><img
+                class="small-logo"
+                src="./media/images/white-fire.svg"
+                alt="logo"
+            /></a>
+          </div>
+          <div>
+            <search>
+              <form>
+                <input
+                  name="search"
+                  id="search"
+                  placeholder=""
+                  type="search"
+                  class="search-bar"
+                />
+                <button type="submit" class="search-button">
+                  <img src="./media/images/search.svg" alt="search" />
+                </button>
+              </form>
+            </search>
+          </div>
+          <div class="header-navigation">
+            <a href="">
+              <img src="./media/images/bell.svg" alt="notifications" />
+            </a>
+            <a href="" class="header-rating">
+              <img src="./media/images/rating.svg" alt="rating" />
+            </a>
+            <a href="">
+              <img src="./media/images/profile.png" alt="profile" />
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="background-darkgrey">
+        <div class="main-max-width">
+          <section class="university-block">
+            <div class="university-about">
+              <h1 class="university-about-name">МГТУ им. Баумана</h1>
+              <h1>О ВУЗе</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <h1 class="university-rating">12 место в рейтинге</h1>
+            </div>
+            <div class="university-image"></div>
+          </section>
+        </div>
+      </div>
+      <div class="background-grey">
+        <div class="main-max-width">
+          <section class="university-reports">
+            <div class="sort-block">
+              <div>
+                <h1>Решенные обращения</h1>
+              </div>
+              <div class="display-flex">
+                <form action="">
+                  <select name="sort" id="" class="sort">
+                    <option value="1">Сначала новые</option>
+                    <option value="2">Сначала старые</option>
+                    <option value="3">Сначала популярные</option>
+                    <option value="4">Сначала непопулярные</option>
+                  </select>
+                </form>
+                <img
+                  src="./media/images/sort_by_best.svg"
+                  alt="sort_by_best"
+                  class="sort-img"
+                />
+              </div>
+            </div>
+            <div class="reports-slider" id="scroll-container">
+              <div class="slider-el">
+                <div class="space-between">
+                  <div class="slider-el-header">
+                    <h1>Заявка заявка заявка</h1>
+                    <p>Анонимный</p>
+                  </div>
+                  <div>
+                    <h1 class="slider-el-status">Активно</h1>
+                  </div>
+                </div>
+                <div>
+                  <p class="slider-el-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt i
+                  </p>
+                </div>
+                <div class="space-between">
+                  <div class="report-buttons display-flex">
+                    <p id="rating" class="report-rating">4</p>
+                    <img src="./media/images/dark-grey-fire.svg" alt="rate-up" />
+                    <img
+                      src="./media/images/comments.svg"
+                      class="comments-img"
+                      alt="comments"
+                    />
+                    <img src="./media/images/link.svg" alt="share" />
+                  </div>
+                  <div>
+                    <p id="date_created">29 марта 2024 г. 16:32</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="slider-el">
+                <div class="space-between">
+                  <div class="slider-el-header">
+                    <h1>Заявка заявка заявка</h1>
+                    <p>Анонимный</p>
+                  </div>
+                  <div>
+                    <h1 class="slider-el-status">Активно</h1>
+                  </div>
+                </div>
+                <div>
+                  <p class="slider-el-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt i
+                  </p>
+                </div>
+                <div class="space-between">
+                  <div class="report-buttons display-flex">
+                    <p id="rating" class="report-rating">4</p>
+                    <img src="./media/images/dark-grey-fire.svg" alt="rate-up" />
+                    <img
+                      src="./media/images/comments.svg"
+                      class="comments-img"
+                      alt="comments"
+                    />
+                    <img src="./media/images/link.svg" alt="share" />
+                  </div>
+                  <div>
+                    <p id="date_created">29 марта 2024 г. 16:32</p>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="slider-el">
+                <div class="space-between">
+                  <div class="slider-el-header">
+                    <h1>Заявка заявка заявка</h1>
+                    <p>Анонимный</p>
+                  </div>
+                  <div>
+                    <h1 class="slider-el-status">Активно</h1>
+                  </div>
+                </div>
+                <div>
+                  <p class="slider-el-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt i
+                  </p>
+                </div>
+                <div class="space-between">
+                  <div class="report-buttons display-flex">
+                    <p id="rating" class="report-rating">4</p>
+                    <img src="./media/images/dark-grey-fire.svg" alt="rate-up" />
+                    <img
+                      src="./media/images/comments.svg"
+                      class="comments-img"
+                      alt="comments"
+                    />
+                    <img src="./media/images/link.svg" alt="share" />
+                  </div>
+                  <div>
+                    <p id="date_created">29 марта 2024 г. 16:32</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="background-darkgrey">
+        <div class="main-max-width">
+          <div class="sort-block review-header">
+            <div>
+              <h1>Отзывы студентов</h1>
+            </div>
+            <div class="display-flex">
+              <form action="">
+                <select name="sort" id="" class="sort">
+                  <option value="1">Сначала новые</option>
+                  <option value="2">Сначала старые</option>
+                  <option value="3">Сначала высокая оценка</option>
+                  <option value="4">Сначала низкая оценка</option>
+                </select>
+              </form>
+              <img
+                src="./media/images/sort_by_best.svg"
+                alt="sort_by_best"
+                class="sort-img"
+              />
+            </div>
+          </div>
+          <div class="review-block">
+            <div class="review-el">
+              <div>
+                <div class="space-between">
+                  <div class="display-flex">
+                    <div class="review-el-rating">
+                      <h1>А</h1>
+                      <img src="./media/images/star.svg" alt="star" />
+                    </div>
+                    <div>
+                      <h1 class="review-el-name">Аноним</h1>
+                    </div>
+                  </div>
+                  <div>29 марта 2024 г. 16:32</div>
+                </div>
+                <div>
+                  <p class="review-el-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="review-el">
+              <div>
+                <div class="space-between">
+                  <div class="display-flex">
+                    <div class="review-el-rating">
+                      <h1>А</h1>
+                      <img src="./media/images/star.svg" alt="star" />
+                    </div>
+                    <div>
+                      <h1 class="review-el-name">Аноним</h1>
+                    </div>
+                  </div>
+                  <div>29 марта 2024 г. 16:32</div>
+                </div>
+                <div>
+                  <p class="review-el-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                </div>
+                <div class="review-el-images">
+                  <div
+                    class="review-el-image"
+                    style="
+                      background-image: url(./media/images/download_android.png);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mobile-display">
+      <div class="mobile-university-image">
+          <h1>МГСУ</h1>
+        </div>
+        <div class="mobile-university-info">
+          <p>ВУЗ решил <span class="color-red">100%</span> заявок на площадке</p>
+          <p>Средняя оценка <span class="color-red"></spanclass>5</span> из 5</p>
+          <button class="mobile-darkgrey-white-button">Решенные</button>
+        </div>
+        <div class="mobile-university-button-block mobile-last-element">
+            <button class="mobile-grey-black-button">
+                Отзывы студентов
+            </button>
+        </div>
+        <footer>
+          <div class="footer">
+            <div class="display-center">
+              <img src="./media/images/home.png" alt="home" />
+            </div>
+            <div class="display-center">
+              <img src="./media/images/bell.svg" alt="bell" />
+            </div>
+            <div class="display-center">
+              <img src="./media/images/rating.svg" alt="rating" />
+            </div>
+            <div class="display-center">
+              <img src="./media/images/profile.png" alt="profile" />
+            </div>
+          </div>
+        </footer>
+  </section>
+  </body>
+  <script src="./media/scripts/scroll_script.js"></script>
+</html>

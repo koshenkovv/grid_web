@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./media/styles/report_style.css" />
+    <title>Обращения</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header-logo">
+          <a href="https://studentsays.ru/reports/"
+            ><img
+              class="big-logo"
+              src="./media/images/header_white_logo.svg"
+              alt="logo" /><img
+              class="small-logo"
+              src="./media/images/white-fire.svg"
+              alt="logo"
+          /></a>
+        </div>
+        <div>
+          <search>
+            <form>
+              <input
+                name="search"
+                id="search"
+                placeholder=""
+                type="search"
+                class="search-bar"
+              />
+              <button type="submit" class="search-button">
+                <img src="./media/images/search.svg" alt="search" />
+              </button>
+            </form>
+          </search>
+        </div>
+        <div class="header-navigation">
+          <img src="./media/images/bell.svg" alt="notifications" />
+
+          <img
+            src="./media/images/rating.svg"
+            alt="rating"
+            class="header-rating"
+          />
+
+          <img src="./media/images/profile.png" alt="profile" />
+        </div>
+      </div>
+    </header>
+    <section class="background-grey">
+      <div class="max-width">
+        <div></div>
+        <div class="reports-body">
+          <div class="reports-block">
+            {% for report in reports %}
+              <div class="reports-el" data-report-id="{{ report.idReport }}"
+                                    onclick="openReport(this)">
+                                    <div class="space-between">
+                                        <div class="report-header">
+                                            <h1>{{ report.header }}</h1>
+                                            <p>{% if report.anonym %}
+                                                Анонимный студент
+                                                {% else %}
+                                                {% if report.idUser %}
+                                                {{ report.idUser.first_name }} {{ report.idUser.last_name }}
+                                                {% else %}
+                                                Неизвестный пользователь
+                                                {% endif %}
+                                                {% endif %}</p>
+                                        </div>
+                                        <div>
+                                            <h1 class="report-status">{{ report.idStatus }}</h1>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="report-text">{{ report.text }}</p>
+                                    </div>
+                                    <div class="space-between">
+                                        <div class="report-buttons display-flex">
+                                            <p id="rating" class="report-rating">{{ report.rating }}</p>
+                                            <img src="/media/images/dark-grey-fire.svg" alt="rate-up">
+                                            <img src="/media/images/comments.svg" class="comments-img" alt="comments">
+                                            <img src="/media/images/link.svg" alt="share">
+                                        </div>
+                                        <div>
+                                            <p id="date_created">{{ report.date_created }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+            {% endfor %}
+          
+          </div>
+          <div class="university-block"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
