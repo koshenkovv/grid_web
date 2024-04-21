@@ -24,7 +24,7 @@
 }
 
 footer {
-  padding: 1.25rem 0;
+  padding: 0.5rem 0;
   width: 100vw;
   background-color: #cc2222;
   position: fixed;
@@ -104,6 +104,171 @@ footer {
 
 .mobile-display {
   display: none;
+}
+
+.mobile-solved-university-image {
+  margin: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  aspect-ratio: 2/1;
+  background-image: url(../images/university.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.mobile-solved-university-image h1 {
+  position: absolute;
+  bottom: 0;
+  margin: 1rem;
+  color: white;
+}
+
+.mobile-section-header {
+  margin: 2rem 0 2rem 2rem;
+  font-size: 1.5rem;
+}
+
+.mobile-report-block {
+  margin: 0 2rem;
+  box-sizing: border-box;
+}
+
+.mobile-report-solved-el {
+  background-color: #d9d9d9;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-report-solved-el-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0px;
+}
+
+.mobile-report-solved-el-header {
+  grid-area: 1 / 1 / 2 / 4;
+}
+
+.mobile-report-solved-el-rating {
+  grid-area: 1 / 4 / 2 / 5;
+  display: flex;
+  justify-content: right;
+}
+
+.mobile-report-solved-el-rating p {
+  font-size: 1rem;
+}
+
+.mobile-report-solved-el-rating img {
+  height: 1rem;
+  margin-left: 0.25rem;
+}
+
+.mobile-report-solved-el-header h1 {
+  font-size: 1rem;
+}
+
+.mobile-report-solved-el-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.mobile-report-solved-el-bottom p {
+  font-size: 1rem;
+}
+
+.mobile-report-solved-el-status p {
+  color: #cc2222;
+  text-decoration: underline;
+}
+
+.mobile-back-button-block button {
+  background-color: #d9d9d9;
+  padding: 0.25rem 0.375rem;
+  border: none;
+  margin: 2rem 0 0rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.mobile-review-header {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-review-block {
+  margin: 0 2rem;
+  box-sizing: border-box;
+}
+
+.mobile-review-el {
+  background-color: #d9d9d9;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-review-el-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-review-el-header h1 {
+  font-size: 1rem;
+}
+
+.mobile-review-el-text {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.mobile-review-el-rating {
+  display: flex;
+  justify-content: right;
+}
+
+.mobile-review-el-rating img {
+  height: 1rem;
+  margin-left: 0.25rem;
+}
+
+.mobile-report-el {
+  background-color: #d9d9d9;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-report-el-header {
+  font-size: 1rem;
+}
+
+.mobile-report-el-author {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #cc2222;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-report-el-rating img {
+  height: 1rem;
+  margin-left: 0.25rem;
+}
+
+.mobile-report-sort-block {
+  display: flex;
+  margin: 0rem 0 2rem 0;
+}
+
+.mobile-sort-img {
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 768px) {
