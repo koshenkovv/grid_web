@@ -271,6 +271,169 @@ footer {
   margin-right: 0.5rem;
 }
 
+.mobile-faq-block {
+  padding: 0 2rem;
+}
+
+.mobile-faq-el {
+  background-color: #d9d9d9;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-faq-el-text {
+  font-size: 1rem;
+}
+
+.mobile-faq-info-block {
+  padding: 0 2rem;
+}
+
+.mobile-profile-block {
+  padding: 0 2rem;
+}
+
+.mobile-profile-name {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+.mobile-profile-el {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  background-color: #d9d9d9;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-profile-el p {
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.mobile-profile-exit {
+  background-color: #cc2222;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-single-report-block {
+  padding: 0 2rem;
+}
+
+.mobile-single-report-block img {
+  height: 1.5rem;
+}
+
+.mobile-single-report-header {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.mobile-single-report-header-satus {
+  color: #cc2222;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.mobile-single-report-text {
+  margin: 2rem 0;
+  font-size: 1rem;
+}
+
+.mobile-single-report-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-single-report-footer-left {
+  display: flex;
+}
+
+.mobile-single-report-footer-left img {
+  margin-right: 1rem;
+}
+
+.mobile-single-report-top-img {
+  margin: 2rem 2rem 1rem 2rem;
+  border-radius: 1rem;
+  position: relative;
+  aspect-ratio: 2/1;
+  background-image: url(../images/university.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.mobile-single-report-footer-right {
+  display: flex;
+  color: #cc2222;
+}
+
+.mobile-single-report-footer-right p {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.mobile-single-report-comments-el {
+  margin-top: 1rem;
+  background-color: #d9d9d9;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  color: #333333;
+}
+
+.mobile-single-report-comments-el-uni {
+  background-color: #f26363;
+  color: white;
+}
+
+.mobile-single-report-comments-el h1,
+.mobile-single-report-comments-el p {
+  font-size: 1rem;
+}
+
+.mobile-single-report-comments-el h1 {
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-single-report-comments-name {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.mobile-single-report-comments-name h1 {
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.mobile-single-report-comments-name p {
+  font-size: 1rem;
+}
+
+.mobile-single-report-comment {
+  display: flex;
+}
+
+.mobile-single-report-comment-count {
+  margin: 0 1rem 0 -0.5rem;
+}
+
+.mobile-notifications-block {
+  padding: 0 2rem;
+}
+
 @media (max-width: 768px) {
   .desktop-display {
     display: none;
