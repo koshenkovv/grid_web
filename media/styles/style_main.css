@@ -30,18 +30,16 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .header-menu {
+  position: absolute;
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 100;
-  background-color: rgba(69, 69, 69, 0.4);
 }
 
 .header-menu-blocks {
   position: relative;
   width: 1280px;
   height: 100vh;
-  z-index: 200;
 }
 
 .header-menu-profile {
@@ -55,6 +53,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border-bottom-right-radius: 1rem;
   border: 1px solid #45454566;
   border-top: none;
+  z-index: 100;
 }
 
 .header-menu-profile-header {
@@ -66,18 +65,28 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .header-menu-profile-el {
   display: flex;
+  justify-content: space-between;
   padding: 0rem 1rem 2rem 1rem;
   cursor: pointer;
 }
 
 .header-menu-profile-el p {
-  margin: 2px 0 0 1rem;
   font-size: 1rem;
 }
 
 .header-menu-profile-el h1 {
   font-size: 1rem;
   text-decoration: underline;
+}
+
+.header-menu-close {
+  display: none;
+  background-color: rgba(69, 69, 69, 0.4);
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  z-index: 99;
 }
 
 .header {

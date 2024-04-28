@@ -434,6 +434,34 @@ footer {
   padding: 0 2rem;
 }
 
+.mobile-single-report-gallery-el-header {
+  margin: 1rem 0rem;
+  font-size: 1rem;
+}
+
+.mobile-single-report-gallery-img-block {
+  margin-bottom: 2rem;
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.mobile-single-report-gallery-el-img {
+  width: 120px;
+  height: 120px;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
   .desktop-display {
     display: none;
